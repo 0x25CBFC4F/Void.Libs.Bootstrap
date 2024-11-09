@@ -28,16 +28,24 @@
         <PackageLicenseUrl>https://www.gnu.org/licenses/agpl-3.0.en.html</PackageLicenseUrl>
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/0x25CBFC4F/Void.Libs.Bootstrap</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
-    <!-- Icon -->
+    <!-- Icon and README -->
     <ItemGroup>
         <None Include="..\resources\icon.png">
             <Pack>True</Pack>
-            <PackagePath></PackagePath>
+            <PackagePath>\</PackagePath>
             <Link>icon.png</Link>
         </None>
+
+        <Content Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>README.md</Link>
+        </Content>
     </ItemGroup>
+    
     <ItemGroup>
       <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
     </ItemGroup>
