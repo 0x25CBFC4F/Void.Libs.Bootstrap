@@ -69,6 +69,8 @@ This method also accepts `ErrorBootstrapBehavior` as an argument. It specifies h
 
 ### 5. Full source code
 
+Here's what our `Program.cs` looks like:
+
 ```C#
 using Void.Libs.Bootstrap;
 using Void.Libs.Bootstrap.Base;
@@ -105,3 +107,5 @@ internal class ExampleBootstrapAction : IBootstrapPipelineAction
     }
 }
 ```
+
+For a complete example, please see the [example source code](https://github.com/0x25CBFC4F/Void.Libs.Bootstrap/tree/main/src/Void.Libs.Bootstrap.Example).

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+﻿using JetBrains.Annotations;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Void.Libs.Bootstrap.Base;
 using Void.Libs.Bootstrap.Enums;
 using Void.Libs.Bootstrap.Middlewares;
@@ -10,6 +11,7 @@ namespace Void.Libs.Bootstrap;
 /// <summary>
 /// Startup extensions for <see cref="WebApplicationBuilder"/>.
 /// </summary>
+[PublicAPI]
 public static class StartupExtensions
 {
     private static readonly Type StartupPipelineType = typeof(AbstractBootstrapPipeline);

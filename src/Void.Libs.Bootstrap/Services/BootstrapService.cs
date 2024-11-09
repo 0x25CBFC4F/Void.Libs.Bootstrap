@@ -1,4 +1,5 @@
-﻿using Void.Libs.Bootstrap.Base;
+﻿using JetBrains.Annotations;
+using Void.Libs.Bootstrap.Base;
 using Void.Libs.Bootstrap.Enums;
 using Void.Libs.Bootstrap.Exceptions;
 
@@ -7,6 +8,7 @@ namespace Void.Libs.Bootstrap.Services;
 /// <summary>
 /// Startup service. Actually does the bootstrapping actions.
 /// </summary>
+[PublicAPI]
 public class BootstrapService(
     AbstractBootstrapPipeline pipeline,
     ILoggerFactory loggerFactory,
@@ -59,8 +61,12 @@ public class BootstrapService(
     /// <inheritdoc />
     public void Subscribe(Action<BootstrapState> callback)
     {
-        if(_cancellationTokenSource.IsCancellationRequested)
+        if (_cancellationTokenSource.IsCancellationRequested)
+        {
+            // Special case: someone subscribed after we're already done. Just call the callback immediately.
+            callback(State);
             return;
+        }
         
         _cancellationTokenSource.Token.Register(_ => callback(State), null);
     }
@@ -73,7 +79,7 @@ public class BootstrapService(
         await Task.Yield();
         
         var manualResetEvent = new ManualResetEventSlim(false);
-        Subscribe((BootstrapState _) => manualResetEvent.Set());
+        Subscribe(_ => manualResetEvent.Set());
         
         manualResetEvent.Wait(cancellationToken);
         return State;

@@ -1,8 +1,10 @@
-﻿using Void.Libs.Bootstrap.Enums;
+﻿using JetBrains.Annotations;
+using Void.Libs.Bootstrap.Enums;
 using Void.Libs.Bootstrap.Exceptions;
 
 namespace Void.Libs.Bootstrap.Services;
 
+[PublicAPI]
 public interface IBootstrapService : IHostedService
 {
     /// <summary>
