@@ -1,0 +1,42 @@
+﻿<!--suppress CheckTagEmptyBody -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <LangVersion>latest</LangVersion>
+
+    </PropertyGroup>
+
+    <!-- Documentation + debug symbols -->
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DebugType>full</DebugType>
+        <DocumentationFile>bin\Release\Void.Libs.Bootstrap.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <!-- NuGet configuration -->
+
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>0x25CBFC4F</Authors>
+        <Description>Lightweight package to bootstrap your service.</Description>
+        <Copyright>2024 0x25CBFC4F</Copyright>
+        <PackageProjectUrl>https://github.com/0x25CBFC4F/Void.Libs.Bootstrap</PackageProjectUrl>
+        <PackageLicenseUrl>https://www.gnu.org/licenses/agpl-3.0.en.html</PackageLicenseUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/0x25CBFC4F/Void.Libs.Bootstrap</RepositoryUrl>
+    </PropertyGroup>
+
+    <!-- Icon -->
+    <ItemGroup>
+        <None Include="..\resources\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>icon.png</Link>
+        </None>
+    </ItemGroup>
+
+</Project>
