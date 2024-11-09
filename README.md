@@ -1,5 +1,7 @@
 # 🚀 Void.Libs.Bootstrap
 
+[![Documentation build](https://build.voids.site/app/rest/builds/buildType:(id:Libraries_VoidLibsBootstrap_BuildDocumentation),count:1,defaultFilter:false/statusIcon)](https://build.voids.site/buildConfiguration/Libraries_VoidLibsBootstrap_BuildPackage)
+
 **Lightweight package to execute bootstrap actions in your service.**
 
 [![Documentation build](https://build.voids.site/app/rest/builds/buildType:(id:Libraries_VoidLibsBootstrap_BuildDocumentation),count:1,defaultFilter:false/statusIcon)](https://build.voids.site/buildConfiguration/Libraries_VoidLibsBootstrap_BuildDocumentation)
