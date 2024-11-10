@@ -7,7 +7,6 @@
         <Nullable>enable</Nullable>
         <OutputType>Library</OutputType>
         <LangVersion>latest</LangVersion>
-
     </PropertyGroup>
 
     <!-- Documentation + debug symbols -->
@@ -17,8 +16,8 @@
     </PropertyGroup>
 
     <!-- NuGet configuration -->
-
     <PropertyGroup>
+        <Version>0.1-dev</Version>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>0x25CBFC4F</Authors>
